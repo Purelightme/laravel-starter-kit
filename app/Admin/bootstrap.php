@@ -19,3 +19,7 @@
  */
 
 Encore\Admin\Form::forget(['map', 'editor']);
+
+\Encore\Admin\Form::extend('ueditor',\App\Admin\Extensions\Editors\UEditor::class);
+
+\Encore\Admin\Grid\Column::extend('expand',\App\Admin\Extensions\Columns\ExpandRow::class);

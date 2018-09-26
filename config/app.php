@@ -177,6 +177,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //本项目用到的第三方package
+        \Overtrue\LaravelSocialite\ServiceProvider::class,
     ],
 
     /*
@@ -225,6 +227,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        //本项目用到的第三方package
+        'Socialite' => \Overtrue\LaravelSocialite\Socialite::class,
 
     ],
 

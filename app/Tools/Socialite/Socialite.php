@@ -21,6 +21,7 @@ class Socialite
     public static function driver($driver)
     {
         self::$driver = $driver;
+        return new self();
     }
 
     /**
