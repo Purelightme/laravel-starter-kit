@@ -15,7 +15,9 @@ class PassportController extends Controller
 
     public function callback(Request $request)
     {
-        $client = '';
+        if (!$request->code){
+            return 'token exists in url';
+        }
 
         $http = new Client();
 

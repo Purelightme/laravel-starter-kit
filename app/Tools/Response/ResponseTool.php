@@ -11,7 +11,7 @@ namespace App\Tools\Response;
 
 use Illuminate\Contracts\Validation\Validator;
 
-class Response
+class ResponseTool
 {
     public static function buildSuccess($data = [])
     {

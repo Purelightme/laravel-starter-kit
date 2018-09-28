@@ -20,7 +20,7 @@ class SocialiteController extends Controller
 
     public function api(Request $request)
     {
-        return \App\Tools\Socialite\Socialite::driver('qq')::getSocialiteOrigin($request->input('openid'),
+        return \App\Tools\Socialite\SocialiteTool::driver('qq')::getSocialiteOrigin($request->input('openid'),
             $request->input('access_token'));
     }
 }

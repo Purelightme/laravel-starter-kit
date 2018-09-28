@@ -32,5 +32,7 @@ class AuthServiceProvider extends ServiceProvider
         Passport::tokensCan([
             'userinfo' => '获取用户个人信息，包括用户名，邮箱，头像。'
         ]);
+
+        Passport::enableImplicitGrant();
     }
 }

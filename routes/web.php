@@ -31,6 +31,12 @@ Route::prefix('demo')->group(function (){
         Route::get('index','Demo\PassportController@index');
         Route::get('callback','Demo\PassportController@callback');
     });
-
+    Route::prefix('upload')->group(function (){
+        Route::post('single','Demo\UploadController@single');
+        Route::post('multi','Demo\UploadController@multi');
+    });
+});
+Route::prefix('test')->group(function (){
+    Route::get('index','TestController@index');
 });
 

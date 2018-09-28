@@ -11,7 +11,7 @@ namespace App\Exceptions;
 
 use Throwable;
 
-class SmsException extends \Exception
+class SmsException extends CommonException
 {
     const EXCEPTION_MAP = [
         self::EXCEPTION_PHONE_INVALID  => '手机号格式错误',

@@ -1,0 +1,16 @@
+{
+    "name": "DemoModule",
+    "alias": "demomodule",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\DemoModule\\Providers\\DemoModuleServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

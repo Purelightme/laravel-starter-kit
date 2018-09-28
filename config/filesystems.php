@@ -63,6 +63,28 @@ return [
             'bucket' => env('AWS_BUCKET'),
         ],
 
+        'admin' => [
+            'driver'     => 'local',
+            'root'       => public_path('uploads'),
+            'visibility' => 'public',
+            'url' => env('APP_URL').'/uploads',
+        ],
+
+        'qiniu' => [
+            'driver'  => 'qiniu',
+            'domains' => [
+                'default' => 'qn.hooook.com',//【免费的域名有每天10G的流量限制】
+                'https'     => '',
+                'custom'    => '',
+            ],
+            'access_key'=> env('QINIU_ACCESS_KEY'),
+            'secret_key'=> env('QINIU_SECRET_KEY'),
+            'bucket'    => 'gcl-img',
+            'notify_url'=> '',  //持久化处理回调地址
+            'access'    => 'public'
+        ],
+
+
     ],
 
 ];

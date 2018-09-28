@@ -11,7 +11,7 @@ namespace App\Tools\Socialite;
 
 use GuzzleHttp\Client;
 
-class Socialite
+class SocialiteTool
 {
     private static $driver;
 

@@ -179,6 +179,7 @@ return [
 
         //本项目用到的第三方package
         \Overtrue\LaravelSocialite\ServiceProvider::class,
+        \Laravel\Scout\ScoutServiceProvider::class,
     ],
 
     /*
@@ -230,6 +231,7 @@ return [
 
         //本项目用到的第三方package
         'Socialite' => \Overtrue\LaravelSocialite\Socialite::class,
+
 
     ],
 

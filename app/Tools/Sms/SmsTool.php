@@ -10,7 +10,7 @@ namespace App\Tools\Sms;
 
 
 use App\Exceptions\SmsException;
-use App\Tools\Response\Response;
+use App\Tools\Response\ResponseTool;
 use Illuminate\Support\Str;
 use Overtrue\EasySms\EasySms;
 use Overtrue\EasySms\Exceptions\InvalidArgumentException;
@@ -48,9 +48,9 @@ class SmsTool
             if ($isLocal){
                 if (isset($params['data']['code']))
                     $code = ['code' => $params['data']['code']];
-                $res = Response::buildSuccess($code ?? []);
+                $res = ResponseTool::buildSuccess($code ?? []);
             }else{
-                $res = Response::buildSuccess();
+                $res = ResponseTool::buildSuccess();
             }
         }
         return $res;
