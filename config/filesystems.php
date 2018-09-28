@@ -51,7 +51,7 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
         ],
 
@@ -64,24 +64,36 @@ return [
         ],
 
         'admin' => [
-            'driver'     => 'local',
-            'root'       => public_path('uploads'),
+            'driver' => 'local',
+            'root' => public_path('uploads'),
             'visibility' => 'public',
-            'url' => env('APP_URL').'/uploads',
+            'url' => env('APP_URL') . '/uploads',
         ],
 
         'qiniu' => [
-            'driver'  => 'qiniu',
+            'driver' => 'qiniu',
             'domains' => [
                 'default' => 'qn.hooook.com',//【免费的域名有每天10G的流量限制】
-                'https'     => '',
-                'custom'    => '',
+                'https' => '',
+                'custom' => '',
             ],
-            'access_key'=> env('QINIU_ACCESS_KEY'),
-            'secret_key'=> env('QINIU_SECRET_KEY'),
-            'bucket'    => 'gcl-img',
-            'notify_url'=> '',  //持久化处理回调地址
-            'access'    => 'public'
+            'access_key' => env('QINIU_ACCESS_KEY'),
+            'secret_key' => env('QINIU_SECRET_KEY'),
+            'bucket' => 'gcl-img',
+            'notify_url' => '',  //持久化处理回调地址
+            'access' => 'public'
+        ],
+
+        'oss' => [
+            'driver' => 'oss',
+            'access_id' => env('ACCESS_KEY_ID'),
+            'access_key' => env('ACCESS_KEY_SECRET'),
+            'bucket' => 'demo',
+            'endpoint' => 'oss-cn-hangzhou.aliyuncs.com', // OSS 外网节点或自定义外部域名
+            'cdnDomain' => '', // 如果isCName为true, getUrl会判断cdnDomain是否设定来决定返回的url，如果cdnDomain未设置，则使用endpoint来生成url，否则使用cdn
+            'ssl' => false, // true to use 'https://' and false to use 'http://'. default is false,
+            'isCName' => false, // 是否使用自定义域名,true: 则Storage.url()会使用自定义的cdn或域名生成文件url， false: 则使用外部节点生成url
+            'debug' => true,
         ],
 
 
